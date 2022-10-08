@@ -1,5 +1,5 @@
-// 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
+// 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
@@ -24,16 +24,15 @@ const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewal
 randomize.addEventListener('click', result);
 
 function result() {
-
-    let newStory = storyText;
-    const xItem = randomValueFromArray(insertX);
-    const yItem = randomValueFromArray(insertY);
-    const zItem = randomValueFromArray(insertZ);
-    newStory = newStory.replace(':insertx:', xItem).replace(':inserty:', yItem).replace(':insertz:', zItem).replace(':insertx:', xItem);
-
+  let newStory = storyText;
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+  newStory = newStory.replace(':insertx:', xItem).replace(':inserty:', yItem).replace(':insertz:', zItem).replace(':insertx:', xItem);
+  
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replace('Bob', name);
+    newStory = newStory.replace('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
